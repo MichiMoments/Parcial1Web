@@ -25,3 +25,8 @@ Este proyecto utiliza varias bibliotecas populares para facilitar el desarrollo 
    npm install react-router-dom
    npm install axios
 
+5. Luego ejecuta el siguiente comando para ejecutar el proyecto, esto se podrá visualizar en http://localhost:3000/ .
+
+   ```bash
+   npm start
+   
