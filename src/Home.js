@@ -2,9 +2,16 @@ import './Home.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
+    const navigate = useNavigate();
+    const routeChange = () =>{ 
+        let path = "/about"; 
+        navigate(path);
+    }
+
+
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -28,8 +35,7 @@ function Home() {
             return;
         }
         else {
-            <Navigate to="/about" replace={true} />
-            console.log("fuck")
+            routeChange();
         }
     };
 

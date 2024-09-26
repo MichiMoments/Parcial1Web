@@ -1,0 +1,56 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.session-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.activity-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.session-card {
+    background-color: #f5f5f5;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.session-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    background-color: #2b6777;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+}
+
+.profile-icon img {
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.activity-times {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.activity-times i {
+    margin-right: 5px;
+}
