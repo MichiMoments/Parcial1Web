@@ -2,12 +2,12 @@
 
 Este proyecto utiliza varias bibliotecas populares para facilitar el desarrollo de interfaces de usuario y la gestión de contenido en múltiples idiomas. A continuación, te mostramos cómo configurar y ejecutar el proyecto en tu máquina local.
 
-## Requisitos previos
+# Requisitos previos
 
 - **Node.js** instalado (v20 o superior).
 - **npm** (Node Package Manager), que viene incluido con Node.js.
 
-## Instalación
+# Instalación
 
 1. Clona este repositorio en tu máquina local o descarga el código fuente.
 
@@ -30,9 +30,9 @@ Este proyecto utiliza varias bibliotecas populares para facilitar el desarrollo 
    ```bash
    npm start
 
-## Componentes y decisiones:
+# Componentes y decisiones:
 
-# Componente Home
+## Componente Home
 El componente **Home** es responsable de renderizar el formulario de inicio de sesión y manejar la entrada del usuario. Incluye la validación del formulario y la navegación a la página **About** al enviar correctamente el formulario.
 
 **Archivo**: `src/Home.js`  
@@ -42,7 +42,7 @@ El componente **Home** es responsable de renderizar el formulario de inicio de s
 - Navega a la página **About** tras el envío exitoso del formulario.
 - Incluye un selector de idioma para la localización.
 
-# Componente About
+## Componente About
 El componente **About** muestra la información del perfil del usuario y los detalles de la sesión. Incluye una tarjeta de perfil y columnas de sesión para diferentes actividades.
 
 **Archivo**: `src/About.js`  
@@ -50,7 +50,7 @@ El componente **About** muestra la información del perfil del usuario y los det
 - Renderiza la información del perfil del usuario.
 - Muestra detalles de las sesiones para actividades como correr, nadar y andar en bicicleta.
 
-# Componente Index
+## Componente Index
 El componente **Index** es el punto de entrada de la aplicación React. Inicializa la aplicación y renderiza el componente **App**.
 
 **Archivo**: `src/index.js`  
@@ -59,7 +59,7 @@ El componente **Index** es el punto de entrada de la aplicación React. Iniciali
 - Renderiza el componente **App**.
 - Incluye **Bootstrap** para el estilo y **i18n** para la localización.
 
-# Configuración de i18n
+## Configuración de i18n
 El archivo de configuración de **i18n** establece la internacionalización de la aplicación. Define las traducciones para diferentes idiomas e inicializa la librería **i18next**.
 
 **Archivo**: `src/i18n.js`  
@@ -68,7 +68,7 @@ El archivo de configuración de **i18n** establece la internacionalización de l
 - Inicializa **i18next** con las traducciones definidas.
 - Establece el idioma predeterminado en español con inglés como opción secundaria.
 
-# Componente LanguageSwitcher
+## Componente LanguageSwitcher
 El componente **LanguageSwitcher** permite a los usuarios cambiar entre diferentes idiomas. Utiliza la librería **i18next** para cambiar el idioma de forma dinámica.
 
 **Archivo**: `src/LanguageSwitcher.js`  
@@ -76,7 +76,7 @@ El componente **LanguageSwitcher** permite a los usuarios cambiar entre diferent
 - Proporciona botones para cambiar entre inglés y español.
 - Utiliza **i18next** para cambiar el idioma de manera dinámica.
 
-# Datos simulados (mock data)
+## Datos simulados (mock data)
 Se utilizan funciones de servicio **mock** para simular los datos de usuario y las sesiones de entrenamiento.
 Se realizó una creación de un API mediante el servicio de **Mockaroo**, donde a través de un fetch se consigue la información del API.
 
