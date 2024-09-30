@@ -3,8 +3,11 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import LanguageSwitcher from './LanguageSwitcher';
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+    const { t } = useTranslation();
     const navigate = useNavigate();
     const routeChange = () =>{ 
         let path = "/about"; 
@@ -30,23 +33,28 @@ function Home() {
             alert('Email invalido, forma incorrecta');
             return;
         }
-        else if (!formData.password > 8) {
+        if (formData.password.length < 8) {
             alert('Contrasenia invalida, menor a 8 caracteres');
             return;
         }
-        else {
-            routeChange();
-        }
+        routeChange();
+        setFormData({
+            email: '',
+            password: ''
+        });
+        
     };
 
     return (
+        <>
+        <LanguageSwitcher></LanguageSwitcher>
         <div className="login-container">
             <div className="login-box">
-            <h2>Log in</h2>
+            <h2>{t("log")}</h2>
 
             <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicUsername">
-                <Form.Label>Email:</Form.Label>
+                <Form.Label>{t("email")}</Form.Label>
                 <Form.Control
                 type="text"
                 name="email"
@@ -56,7 +64,7 @@ function Home() {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password:</Form.Label>
+                <Form.Label>{t("password")}</Form.Label>
                 <Form.Control
                 type="text"
                 name="password"
@@ -66,12 +74,13 @@ function Home() {
             </Form.Group>
 
             <Button variant="primary" type="submit">
-                Submit
+                {t("submit")}	
             </Button>
             </Form>
             
             </div>
         </div>
+        </>
     );
 }
 
